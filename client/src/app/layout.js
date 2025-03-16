@@ -1,6 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header.component";
+
+import store from "@/redux/store/store";
+import ReduxProvider from "@/redux/redux-provider/redux-provider";
 
 export const metadata = {
   title: "D.W. Fazhionz!",
@@ -11,8 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body>
-        <Header />
-        {children}
+        <ReduxProvider store={store}>
+          <Header />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -93,8 +93,9 @@ export const HamburgerContainer = tw.div`
     relative 
     z-50 
     right-[-1em]
-    md:right-0
     ml-[-1em]
-    md:ml-0
     lg:hidden
 `;
+
+export const MobileMenuContainer = tw.section`
+`

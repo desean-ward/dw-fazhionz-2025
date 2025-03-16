@@ -13,6 +13,7 @@ import {
   SearchInput,
   ScrollToTopContainer,
   HamburgerContainer,
+  MobileMenuContainer,
 } from "./header.styles";
 import { navLinks } from "../../../data";
 import Link from "next/link";
@@ -20,12 +21,24 @@ import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useSelector } from "react-redux";
 import MobileMenu from "../mobile-menu/mobile-menu.component";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   // Scrolling state
   const [isScrolling, setIsScrolling] = useState(false);
+  // Mobile menu state
   const [showMenu, setShowMenu] = useState(false);
+
+  // Get the path to initially hide the header on the home page
+  const path = usePathname();
+
+  // Redux state to trigger session storage retrieval
+  const animationComplete = useSelector((state) => state.heroIntro.value);
+
+  // Session storage value for intro animation state
+  const isIntroComplete = sessionStorage.getItem("heroIntroComplete");
 
   // Scroll to top function
   const scrollToTop = () => {
@@ -68,6 +81,24 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Set the header to animate in if the hero animation is complete
+  useEffect(() => {
+    if (isIntroComplete) {
+      gsap.timeline().to("#dw-header", {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+      });
+    }
+  }, [isIntroComplete, animationComplete]);
+
+  useEffect(() => {
+    // Initially hide the header
+    if (!isIntroComplete) {
+      path === "/" && gsap.set("#dw-header", { y: -100, opacity: 0 });
+    }
+  }, [path, isIntroComplete]);
 
   // Back top arrow animation
   useGSAP(() => {
@@ -149,7 +180,9 @@ const Header = () => {
           </HamburgerContainer>
 
           {/* Mobile Menu */}
-          <MobileMenu show={showMenu} close={setShowMenu} />
+          <MobileMenuContainer>
+            <MobileMenu show={showMenu} close={setShowMenu} />
+          </MobileMenuContainer>
         </RightContentContainer>
       </HeaderContainer>
     </HeaderWrapper>
