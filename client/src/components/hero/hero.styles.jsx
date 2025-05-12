@@ -2,8 +2,9 @@ import Image from "next/image";
 import tw from "tailwind-styled-components";
 
 export const HeroWrapper = tw.section`
-    absolute
-    top-0 
+    relative    
+    -top-20 
+    -mb-20
     z-[10]
     w-screen 
     h-screen

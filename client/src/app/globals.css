@@ -15,7 +15,7 @@
   --color-maroon: #800000;
 
   /* Font Sizes */
-  --text-base: 1.4rem;
+  --text-base: 1.5rem;
 
   /* Fonts */
   --font-fatface: "Greater Theory", sans-serif;
@@ -128,9 +128,9 @@ body {
   width: "100%";
 }
 
-.site-info p.copy {
-  /* font-size: 1.5rem; */
-}
+/* .site-info p.copy {
+  font-size: 1.5rem;
+} */
 
 .site-info:nth-child(2) {
   display: flex;
@@ -177,6 +177,13 @@ body {
   @media screen and (min-width: 700px) and (max-width: 900) {
     margin-top: 3rem;
   }
+}
+
+.banner-left-clip-path {
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0 100%);
+}
+.banner-right-clip-path {
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0 100%);
 }
 
 

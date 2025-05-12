@@ -280,7 +280,7 @@ const Hero = () => {
             <div className='line'>
               <p className='tagline'>
                 Modern Apparel For Modern Mindz{" "}
-                <sup className='absolute -top-[0.125em]'>&copy;</sup>
+                <sup>&copy;</sup>
               </p>
             </div>
           </SiteLogo>

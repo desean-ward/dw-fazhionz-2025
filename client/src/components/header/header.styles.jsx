@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 
 export const HeaderWrapper = tw.section`
-    sticky 
+    sticky
     z-50
     top-0
     w-screen 
