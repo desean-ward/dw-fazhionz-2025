@@ -279,8 +279,7 @@ const Hero = () => {
 
             <div className='line'>
               <p className='tagline'>
-                Modern Apparel For Modern Mindz{" "}
-                <sup>&copy;</sup>
+                Modern Apparel For Modern Mindz <sup>&copy;</sup>
               </p>
             </div>
           </SiteLogo>

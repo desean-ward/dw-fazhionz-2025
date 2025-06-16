@@ -80,7 +80,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isScrolling]);
 
   // Set the header to animate in if the hero animation is complete
   useEffect(() => {
@@ -99,6 +99,21 @@ const Header = () => {
       path === "/" && gsap.set("#dw-header", { y: -100, opacity: 0 });
     }
   }, [path, isIntroComplete]);
+
+  // Prevent scrolling if mobile menu is open
+    useEffect(() => {
+      if (showMenu === true) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+  
+      return () => {
+        document.body.classList.remove("no-scroll"); // cleanup on unmount
+      };
+    }, [showMenu]);
+  
+  
 
   // Back top arrow animation
   useGSAP(() => {
@@ -163,14 +178,14 @@ const Header = () => {
 
           {/* Scroll To Top Arrow */}
           <ScrollToTopContainer id='backToTop' onClick={scrollToTop}>
-            <BsFillArrowUpSquareFill size={42} />
+            <BsFillArrowUpSquareFill size={42} className="bg-white rounded-md"  />
           </ScrollToTopContainer>
 
           {/* Mobile Menu */}
           <HamburgerContainer
             id='hamburger'
             onClick={() => {
-              setShowMenu(!showMenu);
+              setShowMenu(true);
             }}
           >
             <GiHamburgerMenu
@@ -180,7 +195,7 @@ const Header = () => {
           </HamburgerContainer>
 
           {/* Mobile Menu */}
-          <MobileMenuContainer>
+          <MobileMenuContainer id='mobile-menu'>
             <MobileMenu show={showMenu} close={setShowMenu} />
           </MobileMenuContainer>
         </RightContentContainer>

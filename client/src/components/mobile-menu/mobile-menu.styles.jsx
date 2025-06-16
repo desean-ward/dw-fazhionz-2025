@@ -5,10 +5,10 @@ import tw from "tailwind-styled-components";
 
 export const Wrapper = styled.div`
   ${tw`lg:hidden`}
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: ${(props) => (props.show ? "none" : "flex")};
   justify-content: center;
   align-items: center;

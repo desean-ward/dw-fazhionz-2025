@@ -1,16 +1,15 @@
 import tw from "tailwind-styled-components";
 import { css } from "styled-components";
-import { motion } from "framer-motion";
 
 export const BannerWrapper = tw.section`
     h-screen 
     w-screen 
     relative 
-    z-50
+    z-10
 `;
 
 export const BannerContainer = tw.div`
-    h-[200px] 
+    h-[300px] 
     md:h-[325px] 
     lg:h-[450px]
     w-full
@@ -50,7 +49,7 @@ export const LeftContent = tw.div`
     shadow-2xl
     rounded-full
     md:px-1		
-    ml-[30%]  
+    ml-[10%]  
     xl:ml-[60%]
     bg-linear-to-r from-black from-10% to-gray-400
 `;

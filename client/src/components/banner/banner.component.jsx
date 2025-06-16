@@ -27,16 +27,20 @@ const Banner = () => {
       transformOrigin: "center center",
     });
 
+    gsap.set(["#left-panel-content", "#right-panel-content"], {
+      opacity: 0,
+    });
+
     gsap.fromTo(
       "#left-panel",
       { scaleX: 0 },
       {
         scaleX: 1,
-        duration: 1,
+        duration: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: "#left-panel",
-          start: "top 50%",
+          start: "top 85%",
           toggleActions: "play reverse play reverse",
           invalidateOnRefresh: true,
         },
@@ -48,6 +52,47 @@ const Banner = () => {
       { scaleX: 0 },
       {
         scaleX: 1,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#right-panel",
+          start: "top 75%",
+          toggleActions: "play reverse play reverse",
+          invalidateOnRefresh: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      "#left-panel-content",
+      {
+        x: -200,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#left-panel",
+          start: "top 50%",
+          toggleActions: "play reverse play reverse",
+          invalidateOnRefresh: true,
+          markers: false,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      "#right-panel-content",
+      {
+        x: 200,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
         duration: 1,
         ease: "power2.out",
         scrollTrigger: {
@@ -55,48 +100,21 @@ const Banner = () => {
           start: "top 50%",
           toggleActions: "play reverse play reverse",
           invalidateOnRefresh: true,
+          markers: false,
         },
       }
     );
-
-    gsap.from("#left-panel-content", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      delay: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#left-panel-content",
-        start: "top 85%",
-        toggleActions: "play reverse play reverse",
-        invalidateOnRefresh: true,
-      },
-    });
-
-    gsap.from("#right-panel-content", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      delay: 3,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#right-panel-content",
-        start: "top 85%",
-        toggleActions: "play reverse play reverse",
-        invalidateOnRefresh: true,
-      },
-    });
   }, []);
   return (
-    <BannerWrapper>
-      <BannerContainer>
+    <BannerWrapper id='banner-wrapper'>
+      <BannerContainer id='banner-container'>
         {/* Left Panel */}
         <LeftPanel id='left-panel'>
           <div id='left-panel-content' className='text-center'>
             <LeftContent className='line-height-2'>
-              <h2 className='text-5xl border-t-1 pt-2'>STYLEZ</h2>
+              <h2 className='text-2xl md:text-5xl border-t-1 pt-2'>STYLEZ</h2>
               <p>FOR</p>
-              <h2 className='text-5xl border-b-1 pb-4'>HER</h2>
+              <h2 className='text-2xl md:text-5xl border-b-1 pb-4'>HER</h2>
             </LeftContent>
           </div>
         </LeftPanel>
@@ -105,9 +123,9 @@ const Banner = () => {
         <RightPanel id='right-panel'>
           <div id='right-panel-content' className='text-center'>
             <RightContent className='line-height-2'>
-              <h2 className='text-5xl border-t-1 pt-2'>STYLEZ</h2>
+              <h2 className='text-2xl md:text-5xl border-t-1 pt-2'>STYLEZ</h2>
               <p>FOR</p>
-              <h2 className='text-5xl border-b-1 pb-4'>HIM</h2>
+              <h2 className='text-2xl md:text-5xl border-b-1 pb-4'>HIM</h2>
             </RightContent>
           </div>
         </RightPanel>

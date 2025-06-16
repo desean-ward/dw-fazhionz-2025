@@ -7,7 +7,6 @@ import { MobileNavLink, Menu, Navigation, Wrapper } from "./mobile-menu.styles";
 
 const MobileMenu = ({ show, close, currentUser }) => {
   const [hasItems, setHasItems] = useState(false);
-
   const wrapperRef = useRef(null);
   const navRef = useRef(null);
   const closeRef = useRef(null);

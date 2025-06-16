@@ -22,10 +22,10 @@ export const RevelearsContainer = tw.div`
     top-0 
     left-0 
     w-screen 
-    h-screen 
+    h-screen    
     flex 
     flex-col 
-    z-[2] 
+    z-10 
 `;
 
 export const Revealer = tw.div`

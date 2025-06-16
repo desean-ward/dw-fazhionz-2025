@@ -4,7 +4,7 @@ export const HeaderWrapper = tw.section`
     sticky
     z-50
     top-0
-    w-screen 
+    w-screen
     h-20 
     px-8
     sticky 
@@ -86,6 +86,8 @@ export const ScrollToTopContainer = tw.div`
     text-[maroon]
     hover:cursor-pointer
     hover:text-[maroon]/70
+    transition-colors
+    duration-300
     size-12
 `;
 
