@@ -41,7 +41,7 @@ const Banner = () => {
         scrollTrigger: {
           trigger: "#left-panel",
           start: "top 85%",
-          toggleActions: "play reverse play reverse",
+          // toggleActions: "play reverse play reverse",
           invalidateOnRefresh: true,
         },
       }
@@ -57,7 +57,7 @@ const Banner = () => {
         scrollTrigger: {
           trigger: "#right-panel",
           start: "top 75%",
-          toggleActions: "play reverse play reverse",
+          // toggleActions: "play reverse play reverse",
           invalidateOnRefresh: true,
         },
       }
@@ -77,7 +77,7 @@ const Banner = () => {
         scrollTrigger: {
           trigger: "#left-panel",
           start: "top 50%",
-          toggleActions: "play reverse play reverse",
+          // toggleActions: "play reverse play reverse",
           invalidateOnRefresh: true,
           markers: false,
         },
@@ -98,7 +98,7 @@ const Banner = () => {
         scrollTrigger: {
           trigger: "#right-panel",
           start: "top 50%",
-          toggleActions: "play reverse play reverse",
+          // toggleActions: "play reverse play reverse",
           invalidateOnRefresh: true,
           markers: false,
         },

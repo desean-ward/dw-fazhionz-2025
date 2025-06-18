@@ -55,11 +55,10 @@ export const SlideImage = tw(Image)`
 export const SlideOverlay = tw.div`
   absolute
   bg-linear-to-r 
-  from-black from-25%
+  from-black from-15%
   to-transparent
   inset-0
-  opacity-30
-  transition-opacity
+  opacity-50
 `;
 
 export const SlideContent = tw.div`

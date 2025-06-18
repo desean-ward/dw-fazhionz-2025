@@ -31,6 +31,34 @@
   }
 }
 
+@layer components {
+  .section-wrapper {
+    @apply 
+    relative 
+    h-screen
+    w-screen 
+    overflow-hidden 
+    bg-white
+    px-8
+    py-20
+
+  }
+
+  .section-heading {
+    @apply 
+    font-fatface 
+    text-4xl 
+    lg:text-7xl
+    flex
+    flex-col
+    items-center
+    justify-start
+    gap-8
+    text-black
+  }
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     /* --background: #0a0a0a; */

@@ -26,12 +26,16 @@ gsap.registerPlugin(ScrollTrigger);
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState("");
-  const timeAutoNext = 3500;
+  const timeAutoNext = 5000;
   const carousel = document.querySelector("#carousel");
   const list = document.querySelector("#list");
   const sliderItemsDom = document.querySelectorAll(".carousel .list .item");
 
-  // Smooth content animation
+  // Variables to watch when carousel is in view
+  const [isInView, setIsInView] = useState(false);
+  const carouselRef = useRef(null);
+
+  // Smooth out content animation when slide changes
   useGSAP(() => {
     const content = document.querySelector(".content");
 
@@ -49,6 +53,22 @@ const Carousel = () => {
       }
     );
   }, [currentIndex]);
+
+  // Set up observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0.6 } // adjust as needed
+    );
+
+    if (carouselRef.current) {
+      observer.observe(carouselRef.current);
+    }
+
+    return () => {
+      if (carouselRef.current) observer.unobserve(carouselRef.current);
+    };
+  }, []);
 
   // Handles the transition of the carousel when the direction changes on arrow button click
   useEffect(() => {
@@ -85,15 +105,18 @@ const Carousel = () => {
 
   // Auto slide functionality
   useEffect(() => {
+    // Wait until carousel is in view to start animation
+    if (!isInView) return;
+
     const autoSlide = setInterval(() => {
       setDirection("next");
     }, timeAutoNext);
 
     return () => clearInterval(autoSlide);
-  }, [currentIndex]);
+  }, [isInView, currentIndex]);
 
   return (
-    <CarouselWrapper className='carouselWrapper'>
+    <CarouselWrapper className='carouselWrapper' ref={carouselRef}>
       <CarouselContainer
         id='carousel'
         className='carousel size-full bg-cover bg-center'
