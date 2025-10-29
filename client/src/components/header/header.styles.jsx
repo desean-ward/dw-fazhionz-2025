@@ -19,6 +19,7 @@ export const HeaderContainer = tw.div`
     flex 
     justify-between 
     items-center
+    text-white
 `;
 
 export const LogoContainer = tw.div`

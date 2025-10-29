@@ -19,6 +19,7 @@ export const CarouselContainer = tw.section`
   relative 
   inset-0
   bg-transparent
+  text-white
 `;
 
 export const CarouselList = tw.div`

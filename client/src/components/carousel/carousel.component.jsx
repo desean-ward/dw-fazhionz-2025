@@ -26,7 +26,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState("");
-  const timeAutoNext = 5000;
+  const timeAutoNext = 3500;
   const carousel = document.querySelector("#carousel");
   const list = document.querySelector("#list");
   const sliderItemsDom = document.querySelectorAll(".carousel .list .item");

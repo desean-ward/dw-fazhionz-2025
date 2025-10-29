@@ -2,7 +2,7 @@ import tw from "tailwind-styled-components";
 import { css } from "styled-components";
 
 export const BannerWrapper = tw.section`
-    h-screen 
+    h-screen
     w-screen 
     relative 
     z-10
@@ -11,7 +11,7 @@ export const BannerWrapper = tw.section`
 export const BannerContainer = tw.div`
     h-[300px] 
     md:h-[325px] 
-    lg:h-[450px]
+    lg:h-[467px]
     w-full
     text-white 
     text-sm 
@@ -25,12 +25,12 @@ export const BannerContainer = tw.div`
 
 export const LeftPanel = tw.div`
     left-0
-    w-[50%]
+    w-[45%]
     bg-[maroon]
     flex 
     flex-col 
     justify-center 
-    items-start
+    pl-[6%]
     banner-left-clip-path
     origin-center
 `;
@@ -42,28 +42,27 @@ export const LeftContent = tw.div`
 	h-[125px] 
     md:h-[225px] 
     lg:h-[300px]
-    flex 
+	flex 
     flex-col 
-    justify-center 
-    shadow-black 
+    justify-center 		
+    shadow-white/30 
     shadow-2xl
-    rounded-full
+	rounded-full
+	px-2 
     md:px-1		
-    ml-[10%]  
-    xl:ml-[60%]
-    bg-linear-to-r from-black from-10% to-gray-400
+    bg-linear-to-r from-gray-500 from-1% to-black
 `;
 
 export const RightPanel = tw.div`
+    relative
     right-0
     w-[50%]
     bg-[black]
     flex 
     flex-col 
     justify-center 
-    items-center
-    pr-4 
-    md:pr-8
+    items-end
+    pr-[15%]
     banner-right-clip-path
     origin-center
 `;
@@ -78,14 +77,14 @@ export const RightContent = tw.div`
 	flex 
     flex-col 
     justify-center 		
-    shadow-white/50 
+    shadow-white/30 
     shadow-2xl
 	rounded-full
 	px-2 
     md:px-1		
     ml-[30%]  
-    xl:ml-[60%]
-    bg-linear-to-r from-[maroon] from-10% to-gray-400
+    xl:mr-[60%]
+    bg-linear-to-r from-[maroon] from-50% to-gray-500
 `;
 
 export const SlideIn = css`
