@@ -59,7 +59,7 @@ const Carousel = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.3 }
+      { threshold: 0.5 }
     );
 
     if (carouselRef.current) {
@@ -83,6 +83,7 @@ const Carousel = () => {
           : carouselImgs[currentIndex].img
       })`;
 
+      // Hnadles the timout of transitions
       const timeOut = setTimeout(() => {
         setCurrentIndex((prevIndex) =>
           prevIndex === carouselImgs.length - 1 ? 0 : prevIndex + 1
@@ -109,10 +110,11 @@ const Carousel = () => {
     // Wait until carousel is in view to start animation
     if (!isInView) return; 
 
-     if (initialView) timeAutoNext = 1000; else timeAutoNext = 3000;
+    // If this is the initial load, the carousel wil rotate after 1 sec, otherwise 3.5 secs.
+     if (initialView) timeAutoNext = 1000; else timeAutoNext = 3500;
      setInitialVies(false)
 
-    
+    // Auto slide accordingly
     const autoSlide = setInterval(() => {
       setDirection("next");
     }, timeAutoNext);
