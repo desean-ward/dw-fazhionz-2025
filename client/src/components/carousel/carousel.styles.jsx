@@ -83,7 +83,6 @@ export const ArrowButtonsContainer = tw.div`
   bottom-12
   lg:bottom-32
   z-50
-
   flex
   justify-center
   items-center
@@ -93,11 +92,12 @@ export const ArrowButtonsContainer = tw.div`
 `;
 
 export const PrevBtn = tw(MdArrowLeft)`
-  size-16
-  text-5xl
+  size-12
+  text-4xl
   text-[maroon]
-  rounded-full
-  p-2
+  rounded-md
+  opacity-70
+  hover:opacity-100
   cursor-pointer
   bg-white
   hover:bg-[maroon]
@@ -108,11 +108,12 @@ export const PrevBtn = tw(MdArrowLeft)`
   ease-in-out
 `;
 export const NextBtn = tw(MdArrowRight)`
-  size-16
-  text-5xl
+  size-12
+  text-4xl
   text-[maroon]
-  rounded-full
-  p-2
+  rounded-md
+  opacity-70
+  hover:opacity-100
   cursor-pointer
   bg-white
   hover:bg-[maroon]

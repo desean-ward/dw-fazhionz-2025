@@ -49,13 +49,13 @@ const Carousel = () => {
       },
       {
         opacity: 1,
-        duration: 0.5,
+        duration: 1,
         delay: 0.3,
       }
     );
   }, [currentIndex]);
 
-  // Set up observer
+  // Set up observer for carousel in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsInView(entry.isIntersecting),

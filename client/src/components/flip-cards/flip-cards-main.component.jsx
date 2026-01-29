@@ -1,6 +1,8 @@
 
-import FlipCardSection1 from "./flip-cards-section1.component"
-import { FlipCardDiv1Container, FlipCardDiv2Container, FlipCardDiv3Container, FlipCardsWrapper, HeroCard, HeroCards } from "./flip-cards.styles"
+import FlipCardsSection1 from "./flip-cards-section1.component"
+import FlipCardsSection2 from "./flip-cards-section2.component"
+import FlipCardsSection3 from "./flip-cards-section3.component"
+import { FlipCardsWrapper } from "./flip-cards.styles"
 
 
 
@@ -9,19 +11,19 @@ const FlipCardsMain = () => {
     return (
         <FlipCardsWrapper>
             {/* Section 1 */}
-            <FlipCardSection1>
+            <FlipCardsSection1>
                 Section 2 Content
-            </FlipCardSection1>
+            </FlipCardsSection1>
 
             {/* Section 2 */}
-            <FlipCardDiv2Container>
+            <FlipCardsSection2>
                 Section 2 Content
-            </FlipCardDiv2Container>
+            </FlipCardsSection2>
 
             {/* Section 3 */ }
-            <FlipCardDiv3Container>
+            <FlipCardsSection3>
                 Section 3 Content
-            </FlipCardDiv3Container>
+            </FlipCardsSection3>
         </FlipCardsWrapper>
     )
 }

@@ -7,7 +7,7 @@ export const FlipCardsWrapper = tw.section`
   -top-[550px]
 `;
 
-export const FlipCardDiv1Container = tw.div`
+export const FlipCardsSection1Container = tw.div`
   h-screen 
   flex
   bg-white
@@ -19,13 +19,13 @@ export const HeroCard = tw.div`
 
 `
 
-export const FlipCardDiv2Container = tw.div`
+export const FlipCardsSection2Container = tw.div`
   h-screen
   flex
   bg-black 
   text-white
   `
-export const FlipCardDiv3Container = tw.section`
+export const FlipCardsSection3Container = tw.section`
   h-screen 
   flex
   bg-white

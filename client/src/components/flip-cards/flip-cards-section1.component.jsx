@@ -1,7 +1,7 @@
-import  FlipCardSection1Styles  from "./flip-cards.styles"
+import  { FlipCardsSection1Container, HeroCards, HeroCard }  from "./flip-cards.styles"
 
-const FlipCardSection1 = () => (
-    <FlipCardDiv1Container>
+const FlipCardsSection1 = () => (
+    <FlipCardsSection1Container>
                 Section 1 Content Updated
                 <HeroCards>
                     {/* Hero Card 1 */}
@@ -40,7 +40,7 @@ const FlipCardSection1 = () => (
                         </div>
                     </HeroCard>
                 </HeroCards>
-            </FlipCardDiv1Container>
+            </FlipCardsSection1Container>
 )
 
-export default FlipCardSection1
+export default FlipCardsSection1
