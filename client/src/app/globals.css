@@ -21,6 +21,23 @@
   --font-fatface: "Greater Theory", sans-serif;
 }
 
+  /* Custom Animations */
+  @theme {
+  @keyframes floating {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -55%);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  --animate-floating: floating 2s ease-in-out infinite;
+}
+
 @layer utility {
   @font-face {
     font-family: "Greater Theory";
@@ -83,48 +100,21 @@
     text-black
   }
 
-  .card-title {
-    @apply 
-    w-full 
-    flex 
-    justify-between
-  }
-
-  .services-header {
-    @apply 
-    font-fatface
-    relative 
-    w-full
-    text-center
-    transform
-    translate-y-[400%]
-    will-change-transform
-  }
-
-  .cards {
-    @apply 
-    fixed 
-    top-0
-    left-0
-    w-[100vw]
-    h-[100svh] 
-    flex 
-    justify-center
-    -z-10
-  }
-
-  .card-container {
-    @apply 
-    relative 
-    w-[75%]
-    h-full 
-    justify-center
-    items-center 
-    gap-16
-  }
-  
-  
 }
+
+
+#card-1 .card-wrapper {
+  animation-delay: 0s;
+}
+
+#card-2 .card-wrapper {
+  animation-delay: 0.25s;
+}
+
+#card-3 .card-wrapper {
+  animation-delay: 0.5s;
+}
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -322,6 +312,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 
 
 

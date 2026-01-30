@@ -2,7 +2,7 @@
 import FlipCardsSection1 from "./flip-cards-section1.component"
 import FlipCardsSection2 from "./flip-cards-section2.component"
 import FlipCardsSection3 from "./flip-cards-section3.component"
-import { FlipCardsWrapper } from "./flip-cards.styles"
+import { Card, CardsContainer, CardsWrapper, CardTitle, CardWrapper, FlipCardsWrapper } from "./flip-cards.styles"
 
 
 
@@ -26,30 +26,30 @@ const FlipCardsMain = () => {
             </FlipCardsSection3>
 
             {/* Additional sections can be added here */}
-            <section className='cards section-wrapper h-screen flex justify-center bg-white'>
-                <div className="cards-container">
+            <CardsWrapper>
+                <CardsContainer>
                     {/* Card 1 */}
-                    <div className="card" id="card-1">
-                        <div className="card-wrapper">
+                    <Card id="card-1">
+                        <CardWrapper>
                             <div className="flip-inner-card">
                                 {/* Front of Card 1 */}
                                 <div className="flip-card-front">
-                                     <div className="card-title">
+                                     <CardTitle>
                                         <span>Plan</span>
                                         <span>01</span>
-                                    </div>
-                                    <div className="card-title">
+                                    </CardTitle>
+                                    <CardTitle>
                                         <span>01</span>
                                         <span>Plan</span>
-                                    </div>
+                                    </CardTitle>
                                 </div>
 
                                 {/* Back of Card 1 */}
                                 <div className="flip-card-back">
-                                     <div className="card-title">
+                                     <CardTitle>
                                         <span>Plan</span>
                                         <span>01</span>
-                                    </div>
+                                    </CardTitle>
 
                                     {/* Card Content */}
                                     <div className="card-copy">
@@ -61,37 +61,37 @@ const FlipCardsMain = () => {
                                         <p>Content 6</p>
                                     </div>
 
-                                    <div className="card-title">
+                                    <CardTitle>
                                         <span>01</span>
                                         <span>Plan</span>
-                                    </div>
+                                    </CardTitle>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </CardWrapper>
+                    </Card>
 
                     {/* Card 2 */}
-                    <div className="card" id="card-2">
-                        <div className="card-wrapper">
+                    <Card id="card-2">
+                        <CardWrapper>
                             <div className="flip-inner-card">
                                 {/* Front of Card 2 */}
                                 <div className="flip-card-front">
-                                     <div className="card-title">
+                                     <CardTitle>
                                         <span>Plan</span>
                                         <span>02</span>
-                                    </div>
-                                    <div className="card-title">
+                                    </CardTitle>
+                                    <CardTitle>
                                         <span>02</span>
                                         <span>Plan</span>
-                                    </div>
+                                    </CardTitle>
                                 </div>
 
                                 {/* Back of Card 2 */}
                                 <div className="flip-card-back">
-                                     <div className="card-title">
+                                     <CardTitle>
                                         <span>Plan</span>
                                         <span>02</span>
-                                    </div>
+                                    </CardTitle>
 
                                     {/* Card Content */}
                                     <div className="card-copy">
@@ -103,37 +103,37 @@ const FlipCardsMain = () => {
                                         <p>Content 12</p>
                                     </div>
 
-                                    <div className="card-title">
+                                    <CardTitle>
                                         <span>02</span>
                                         <span>Plan</span>
-                                    </div>
+                                    </CardTitle>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </CardWrapper>
+                    </Card>
 
                     {/* Card 3 */}
-                    <div className="card" id="card-3">
-                        <div className="card-wrapper">
+                    <Card id="card-3">
+                        <CardWrapper>
                             <div className="flip-inner-card">
                                 {/* Front of Card 3 */}
                                 <div className="flip-card-front">
-                                     <div className="card-title">
+                                     <CardTitle>
                                         <span>Plan</span>
                                         <span>03</span>
-                                    </div>
-                                    <div className="card-title">
+                                    </CardTitle>
+                                    <CardTitle>
                                         <span>03</span>
                                         <span>Plan</span>
-                                    </div>
+                                    </CardTitle>
                                 </div>
 
                                 {/* Back of Card 3 */}
                                 <div className="flip-card-back">
-                                     <div className="card-title">
+                                     <CardTitle>
                                         <span>Plan</span>
                                         <span>03</span>
-                                    </div>
+                                    </CardTitle>
 
                                     {/* Card Content */}
                                     <div className="card-copy">
@@ -145,18 +145,17 @@ const FlipCardsMain = () => {
                                         <p>Content 18</p>
                                     </div>
 
-                                    <div className="card-title">
+                                    <CardTitle>
                                         <span>03</span>
                                         <span>Plan</span>
-                                    </div>
+                                    </CardTitle>    
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                </div>
+                        </CardWrapper>
+                    </Card>
+                </CardsContainer>
                         
-            </section>
+            </CardsWrapper>
         </FlipCardsWrapper>
     )
 }

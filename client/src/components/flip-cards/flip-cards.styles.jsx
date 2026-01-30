@@ -26,23 +26,29 @@ export const HeroCards = tw.div`
   transform
   -translate-x-1/2
   -translate-y-1/2
-  w-full
-  max-w-6xl
+  w-[35%]
   flex
-  gap-16
-  border
+  justify-center
+  gap-4
 `;
 
 export const HeroCard = tw.div`
-  card
+  hero-card
   flex-1 
   relative
-  aspect-ration-[5/7]
+  aspect-[5/7]
   p-[0.75rem]
   border
   rounded-[0.5rem]
   flex
   flex-col
+  justify-between
+`
+
+export const HeroCardTitle = tw.div`
+  card-title
+  w-full 
+  flex 
   justify-between
 `
 
@@ -63,3 +69,62 @@ export const FlipCardsSection3Container = tw.section`
   justify-center
   bg-white
   `
+export const ServicesHeader = tw.div`
+  services-header
+  font-fatface
+  relative 
+  w-full
+  text-center
+  transform
+  //translate-y-[400%]
+  will-change-transform
+`
+
+export const CardsWrapper = tw.section`
+  cards
+  fixed 
+  top-0
+  left-0
+  w-[100vw]
+  h-[100svh] 
+  flex 
+  justify-center
+  //-z-10
+`
+
+export const CardsContainer = tw.div`
+  relative 
+  w-[75%]
+  h-full 
+  flex
+  justify-center
+  items-center 
+  gap-16
+`
+
+export const Card = tw.div`
+  card
+  flex-1 
+  relative
+  aspect-[5/7]
+  perspective-1000
+`
+
+export const CardWrapper = tw.div`
+  card-wrapper
+  absolute 
+  top-1/2 
+  left-1/2 
+  transform
+  translate-[-50%, -50%]
+  w-full
+  h-full 
+  animate-floating
+`
+export const CardTitle = tw.div`
+  card-title
+  w-full 
+  flex 
+  justify-between
+`
+

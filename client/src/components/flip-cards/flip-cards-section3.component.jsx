@@ -1,10 +1,10 @@
-import { FlipCardsSection3Container } from "./flip-cards.styles"
+import { FlipCardsSection3Container, ServicesHeader } from "./flip-cards.styles"
 
 const FlipCardsSection3 = () => (
     <FlipCardsSection3Container>
-        <div className="services-header">
+        <ServicesHeader>
             <h1>Section 3 Content Updated</h1>
-        </div>
+        </ServicesHeader>
     </FlipCardsSection3Container>
 )
 
