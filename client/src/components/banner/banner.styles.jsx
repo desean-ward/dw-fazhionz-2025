@@ -5,7 +5,7 @@ export const BannerWrapper = tw.section`
     h-screen
     w-screen 
     relative 
-    z-10
+    z-50
 `;
 
 export const BannerContainer = tw.div`

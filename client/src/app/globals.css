@@ -41,7 +41,6 @@
     bg-white
     px-8
     py-20
-
   }
 
   .section-heading {
@@ -56,6 +55,75 @@
     gap-8
     text-black
   }
+
+  #hero-card-1 {
+    @apply 
+    relative
+    bg-blue-500
+    z-20
+  }
+
+  #hero-card-2 {
+    @apply 
+    relative
+    bg-red-500
+    z-10
+  }
+
+  #hero-card-3 {
+    @apply 
+    relative
+    bg-green-500
+    z-0
+  }
+
+  .card span {
+    @apply 
+    font-fatface 
+    text-black
+  }
+
+  .card-title {
+    @apply 
+    w-full 
+    flex 
+    justify-between
+  }
+
+  .services-header {
+    @apply 
+    font-fatface
+    relative 
+    w-full
+    text-center
+    transform
+    translate-y-[400%]
+    will-change-transform
+  }
+
+  .cards {
+    @apply 
+    fixed 
+    top-0
+    left-0
+    w-[100vw]
+    h-[100svh] 
+    flex 
+    justify-center
+    -z-10
+  }
+
+  .card-container {
+    @apply 
+    relative 
+    w-[75%]
+    h-full 
+    justify-center
+    items-center 
+    gap-16
+  }
+  
+  
 }
 
 

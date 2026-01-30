@@ -2,10 +2,9 @@ import  { FlipCardsSection1Container, HeroCards, HeroCard }  from "./flip-cards.
 
 const FlipCardsSection1 = () => (
     <FlipCardsSection1Container>
-                Section 1 Content Updated
                 <HeroCards>
                     {/* Hero Card 1 */}
-                    <HeroCard className='card' id='hero-card-1'>
+                    <HeroCard id='hero-card-1'>
                         <div className="card-title">
                             <span>Plan</span>
                             <span>01</span>
@@ -17,7 +16,7 @@ const FlipCardsSection1 = () => (
                     </HeroCard>
 
                     {/*Hero Card 2 */}
-                    <HeroCard className='card' id='hero-card-2'>
+                    <HeroCard id='hero-card-2'>
                         <div className="card-title">
                             <span>Plan</span>
                             <span>02</span>
@@ -29,7 +28,7 @@ const FlipCardsSection1 = () => (
                     </HeroCard>
 
                     {/*Hero Card 3 */}
-                    <HeroCard className='card' id='hero-card-3'>
+                    <HeroCard id='hero-card-3'>
                         <div className="card-title">
                             <span>Plan</span>
                             <span>03</span>
