@@ -2,7 +2,7 @@ import FlipCardsSection1 from "./flip-cards-section1.component"
 import FlipCardsSection2 from "./flip-cards-section2.component"
 import FlipCardsSection3 from "./flip-cards-section3.component"
 
-import { Card, CardsContainer, CardsWrapper, CardTitle, CardWrapper, FlipCardBack, FlipCardFront, FlipCardInner, FlipCardsWrapper } from "./flip-cards.styles"
+import { Card, CardsContainer, CardsSection, CardsWrapper, CardTitle, CardWrapper, FlipCardBack, FlipCardFront, FlipCardInner, FlipCardsWrapper } from "./flip-cards.styles"
 
 const FlipCardsMain = () => {
 
@@ -23,12 +23,12 @@ const FlipCardsMain = () => {
                 Section 3 Content
             </FlipCardsSection3>
 
-            <CardsWrapper>
+            <CardsSection>
                 <CardsContainer>
                     {/* Card 1 */}
-                    <Card id="flip-card-1">
+                    <Card>
                         <CardWrapper>
-                            <FlipCardInner>
+                            <FlipCardInner id="flip-card-1">
                                 {/* Front of Card 1 */}
                                 <FlipCardFront>
                                      <CardTitle>
@@ -68,8 +68,8 @@ const FlipCardsMain = () => {
                     </Card>
 
                     {/* Card 2 */}
-                    <Card id="flip-card-2">
-                        <CardWrapper>
+                    <Card>
+                        <CardWrapper id="flip-card-2">
                             <FlipCardInner>
                                 {/* Front of Card 2 */}
                                 <FlipCardFront>
@@ -110,8 +110,8 @@ const FlipCardsMain = () => {
                     </Card>
 
                     {/* Card 3 */}
-                    <Card id="flip-card-3">
-                        <CardWrapper>
+                    <Card>
+                        <CardWrapper id="flip-card-3">
                             <FlipCardInner>
                                 {/* Front of Card 3 */}
                                 <FlipCardFront>
@@ -151,8 +151,7 @@ const FlipCardsMain = () => {
                         </CardWrapper>
                     </Card>
                 </CardsContainer>
-                        
-            </CardsWrapper>
+            </CardsSection>
         </FlipCardsWrapper>
     )
 }
