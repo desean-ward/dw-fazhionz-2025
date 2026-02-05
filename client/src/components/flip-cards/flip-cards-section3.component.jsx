@@ -8,7 +8,6 @@ import { FlipCardsSection3Container, ServicesHeader } from "./flip-cards.styles"
 
 const FlipCardsSection3 = () => {
     useEffect((() => {
-        document.addEventListener("DOMContentLoaded", () => {
             gsap.registerPlugin(ScrollTrigger)
 
                         // Connect Lenis to ScrollTrigger
@@ -27,19 +26,41 @@ const FlipCardsSection3 = () => {
             const smoothStep = (p) => p * p * (3 - 2 * p);
 
             ScrollTrigger.create({
-                "trigger": ".services",
-                "start": "top top",
-                "end": "+=${window.innerHeight * 4} top",
+                trigger: ".services",
+                start: "top 100px",
+                end: `+=${window.innerHeight * 4}px`,
+                pin: ".services",
+                pinSpacing: true,
             })
 
-        })
+            ScrollTrigger.create({
+                trigger: ".services",
+                start: "top 100px",
+                end: `+=${window.innerHeight * 4}px`,
+                onLeave: (self) => {
+                    const servicesSection = document.querySelector(".services");
+                    const servicesRect = servicesSection.getBoundingClientRect();
+                    const servicesTop = window.pageYOffset + servicesRect.top;
+
+                    gsap.set('.cards', {
+                        position: 'absolute',
+                        top: servicesTop,
+                        left: 0,
+                        width: '100vw',
+                        height: '100vh',
+                    })
+                }
+            })
+
     }), [])
+
 
     return (
         <FlipCardsSection3Container>
             <ServicesHeader>
                 <h1>Section 3 Content Updated</h1>
             </ServicesHeader>
+            
         </FlipCardsSection3Container>
     )
 }

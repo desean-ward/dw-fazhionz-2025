@@ -1,4 +1,3 @@
-
 import FlipCardsSection1 from "./flip-cards-section1.component"
 import FlipCardsSection2 from "./flip-cards-section2.component"
 import FlipCardsSection3 from "./flip-cards-section3.component"
@@ -24,7 +23,6 @@ const FlipCardsMain = () => {
                 Section 3 Content
             </FlipCardsSection3>
 
-            {/* Additional sections can be added here */}
             <CardsWrapper>
                 <CardsContainer>
                     {/* Card 1 */}

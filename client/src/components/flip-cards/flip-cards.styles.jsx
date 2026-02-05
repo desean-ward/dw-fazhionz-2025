@@ -76,7 +76,7 @@ export const ServicesHeader = tw.div`
   w-full
   text-center
   transform
-  //translate-y-[400%]
+  translate-y-[400%]
   will-change-transform
 `
 
@@ -89,7 +89,7 @@ export const CardsWrapper = tw.section`
   h-[100svh] 
   flex 
   justify-center
-  //-z-10
+  -z-10
 `
 
 export const CardsContainer = tw.div`
@@ -147,12 +147,12 @@ export const FlipCardFront = tw.div`
 
 export const FlipCardBack = tw.div`
   flip-card-back
-    p-[1rem]
-    flex
-    flex-col
-    justify-between
-    gap-8 
-    bg-white
-    rotate-y-180
+  p-[1rem]
+  flex
+  flex-col
+  justify-between
+  gap-8 
+  bg-white
+  rotate-y-180
 `
 
