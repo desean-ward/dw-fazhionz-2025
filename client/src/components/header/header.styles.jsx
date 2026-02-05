@@ -4,7 +4,8 @@ export const HeaderWrapper = tw.section`
     sticky
     z-90
     top-0
-    w-screen
+    w-full 
+    max-w-screen
     h-20 
     px-8
     sticky 
@@ -101,4 +102,5 @@ export const HamburgerContainer = tw.div`
 `;
 
 export const MobileMenuContainer = tw.section`
+    hidden
 `

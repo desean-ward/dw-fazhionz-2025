@@ -1,11 +1,47 @@
+'use client';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+import { useEffect } from "react";
+
 import { FlipCardsSection3Container, ServicesHeader } from "./flip-cards.styles"
 
-const FlipCardsSection3 = () => (
-    <FlipCardsSection3Container>
-        <ServicesHeader>
-            <h1>Section 3 Content Updated</h1>
-        </ServicesHeader>
-    </FlipCardsSection3Container>
-)
+const FlipCardsSection3 = () => {
+    useEffect((() => {
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger)
+
+                        // Connect Lenis to ScrollTrigger
+            const lenis = new Lenis();
+            lenis.on("scroll", ScrollTrigger.update());
+
+            // Ensure ScrollTrigger updates on every animation frame
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000)
+            })
+
+            // Ennsures super smooth scrolling
+            gsap.ticker.lagSmoothing(0);
+
+            // Smoothes out the progress values we get from ScrollTrigger
+            const smoothStep = (p) => p * p * (3 - 2 * p);
+
+            ScrollTrigger.create({
+                "trigger": ".services",
+                "start": "top top",
+                "end": "+=${window.innerHeight * 4} top",
+            })
+
+        })
+    }), [])
+
+    return (
+        <FlipCardsSection3Container>
+            <ServicesHeader>
+                <h1>Section 3 Content Updated</h1>
+            </ServicesHeader>
+        </FlipCardsSection3Container>
+    )
+}
 
 export default FlipCardsSection3

@@ -111,7 +111,7 @@ const Carousel = () => {
     if (!isInView) return; 
 
     // If this is the initial load, the carousel wil rotate after 1 sec, otherwise 3.5 secs.
-     if (initialView) timeAutoNext = 1000; else timeAutoNext = 3500;
+     if (initialView) timeAutoNext = 300; else timeAutoNext = 3500;
      setInitialVies(false)
 
     // Auto slide accordingly

@@ -73,21 +73,21 @@
     text-black
   }
 
-  #hero-card-1 {
+  #hero-card-1, #flip-card-1 {
     @apply 
     relative
     bg-blue-500
     z-20
   }
 
-  #hero-card-2 {
+  #hero-card-2, #flip-card-2 {
     @apply 
     relative
     bg-red-500
     z-10
   }
 
-  #hero-card-3 {
+  #hero-card-3, #flip-card-3 {
     @apply 
     relative
     bg-green-500
@@ -100,19 +100,80 @@
     text-black
   }
 
+  .flip-card-front, .flip-card-back {
+    @apply 
+    absolute 
+    w-full
+    h-full 
+    rounded-[1rem]
+    backface-hidden
+    overflow-hidden
+  }
+
+  .card-copy {
+    @apply
+    w-full 
+    h-full 
+    flex 
+    flex-col
+    gap-2
+  }
+
+  .card-copy p {
+    @apply
+    flex-1
+    flex 
+    justify-center
+    items-center
+    text-sm
+    rounded-[0.25rem]
+  }
 }
 
 
-#card-1 .card-wrapper {
+#flip-card-1 .card-wrapper {
   animation-delay: 0s;
 }
 
-#card-2 .card-wrapper {
+#flip-card-2 .card-wrapper {
   animation-delay: 0.25s;
 }
 
-#card-3 .card-wrapper {
+#flip-card-3 .card-wrapper {
   animation-delay: 0.5s;
+}
+
+#flip-card-1 {
+  @apply
+  translate-x-[100%]
+  translate-y-[-100%]
+  rotate-[-5deg] 
+  scale-[0.25]
+  z-20
+}
+
+#flip-card-2 {
+  @apply
+  translate-x-[0%]
+  translate-y-[-100%]
+  rotate-[0deg] 
+  scale-[0.25]
+  z-10
+
+}
+
+#flip-card-3 {
+  @apply
+  translate-x-[-100%]
+  translate-y-[-100%]
+  rotate-[5deg] 
+  scale-[0.25]
+  z-0
+}
+
+.cards-container .card {
+  @apply 
+  opacity-0
 }
 
 

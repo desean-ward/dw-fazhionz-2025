@@ -128,3 +128,31 @@ export const CardTitle = tw.div`
   justify-between
 `
 
+export const FlipCardInner = tw.div`
+  flip-card-inner
+  relative
+  w-full 
+  h-full 
+  transform-style-preserve-3d
+`
+
+export const FlipCardFront = tw.div`
+  flip-card-front
+  p-[1rem]
+  flex
+  flex-col
+  justify-between
+  items-center
+`
+
+export const FlipCardBack = tw.div`
+  flip-card-back
+    p-[1rem]
+    flex
+    flex-col
+    justify-between
+    gap-8 
+    bg-white
+    rotate-y-180
+`
+
