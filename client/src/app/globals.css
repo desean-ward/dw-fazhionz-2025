@@ -147,12 +147,12 @@
   animation-delay: 0.5s;
 }
 
-/* #flip-card-1 {
+#flip-card-1 {
   @apply
   translate-x-[100%]
   translate-y-[-100%]
   rotate-[-5deg] 
-  scale-[0.25]
+  scale-[0.25] 
   z-20
 }
 
@@ -173,14 +173,14 @@
   rotate-[5deg] 
   scale-[0.25]
   z-0
-} */
+} 
 
 /* .cards-container .card {
   @apply 
   opacity-0
-} */
+}
 
-
+*/
 
 @media (prefers-color-scheme: dark) {
   :root {

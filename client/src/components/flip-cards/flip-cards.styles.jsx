@@ -62,6 +62,8 @@ export const FlipCardsSection2Container = tw.section`
 export const FlipCardsSection3Container = tw.section`
   section-wrapper
   services
+  relative 
+  -z-10
   h-[100svh]  
   flex
   justify-center
@@ -87,7 +89,7 @@ export const CardsSection = tw.section`
   h-[100svh] 
   flex 
   justify-center
-  //-z-10
+  -z-10
 `
 
 export const CardsContainer = tw.div`
@@ -99,7 +101,6 @@ export const CardsContainer = tw.div`
   justify-center
   items-center 
   gap-16
-  border-2
 `
 
 export const Card = tw.div`
@@ -151,6 +152,7 @@ export const FlipCardBack = tw.div`
   flex
   flex-col
   justify-between
+  items-center
   gap-8 
   bg-white
   rotate-y-180

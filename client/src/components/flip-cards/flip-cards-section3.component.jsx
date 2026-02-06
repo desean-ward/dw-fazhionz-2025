@@ -27,7 +27,7 @@ const FlipCardsSection3 = () => {
 
             ScrollTrigger.create({
                 trigger: ".services",
-                start: "top 100px",
+                start: "top top",
                 end: `+=${window.innerHeight * 4}px`,
                 pin: ".services",
                 pinSpacing: true,
