@@ -29,22 +29,19 @@ const FlipCardsSection1 = () => {
             ScrollTrigger.create({
                 trigger: ".hero",
                 start: "top 10%",
-                end: "75% 10%",
+                end: "bottom top",
                 scrub: 1,
-                markers: true,
                 onUpdate: (self) => {
                     const progress = self.progress;
                     const heroCardsContainerOpacity = gsap.utils.interpolate(1, 0.5, smoothStep(progress));
 
-                    gsap.set('.hero-cards', {
-                        opacity: heroCardsContainerOpacity,
-                    })
+                    
 
                     // Loop through each card and update its transform based on the scroll progress
                     ["#hero-card-1", "#hero-card-2", "#hero-card-3"].forEach((cardId, index) => {
-                        alert("Progress ", progress)
+                        // alert("Progress ", progress)
                         const delay = index * 0.9;
-                        const cardProgress = gsap.utils.clamp(0, 1, (progress - delay * 0.1) / 1 - delay * 0.1);
+                        const cardProgress = gsap.utils.clamp(0, 1, (progress - delay * 0.08) / 0.8 - delay * 0.08);
 
                         // Scroll cards downward and scale them down as the user scrolls
                         const y = gsap.utils.interpolate("0%", "250%", smoothStep(cardProgress));
@@ -69,6 +66,10 @@ const FlipCardsSection1 = () => {
                             rotation: rotation,
                         })
 
+                        // Set the opacity of the entire container to create a fading effect as the user scrolls
+                        gsap.set('.hero-cards', {
+                        opacity: heroCardsContainerOpacity,
+                        })
                     })
 
                 }
